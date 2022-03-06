@@ -31,7 +31,6 @@ if len(chosen_flat_link) > 0:
     st.write(f"Rooms: {flat_info['num_rooms']}, bathooms: {flat_info['num_bathrooms']}, flat size: {flat_info['flat_area']}")
 
     category_price = get_price_size_category(flat_info)
-    print(f"{category_price=}")
     flats_price_per_m = round(flat_info['price'] / int(flat_info['flat_area']))
 
     price_diff_prc = round((flats_price_per_m - category_price)/category_price * 100)
