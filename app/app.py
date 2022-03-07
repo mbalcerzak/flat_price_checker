@@ -43,7 +43,7 @@ else:
         category_price = get_price_size_category(flat_info)
         flats_price_per_m = round(flat_info['price'] / int(flat_info['flat_area']))
 
-        ###
+        ### TODO change
         pred_price = random.choice([10_000, 20_000, 15_000])
         pred_diff = round((flats_price_per_m - pred_price)/pred_price * 100)
         flats_price_per_m_warsaw = 13_000
@@ -78,6 +78,10 @@ else:
                 st.line_chart(price_history)
             except KeyError:
                 st.write("No record of previous prices")   
+
+        with st.expander("Description", expanded=False):
+            # TODO: add
+            pass
 
         with st.expander("See the photos of the apartment", expanded=False):
             filteredImages = flat_info['photos_links']
